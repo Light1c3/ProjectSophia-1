@@ -5,6 +5,7 @@ var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 
 var Main = require('./components/main');
+var GameList = require('./components/game-list');
 
 module.exports = (
   <Router history={new HashHistory}>

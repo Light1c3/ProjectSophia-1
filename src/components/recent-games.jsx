@@ -1,15 +1,18 @@
 var React = require('react');
+var InfiniteGrid = require('react-infinite-grid');
 
-module.exports = React.createClass({
-  render: function() {
-    return <div>
-      <b>Recent Games</b>
-      <div className="recent-games-list">
-        -List
-        -List
-        -List
-        -List
-      </div>
-    </div>
-  }
+var RecentGames = React.createClass({
+	render: function() {
+		return <div>
+			This is {this.props.index}
+		</div>
+	}
 });
+
+module.exports = RecentGames
+
+var items = [];
+
+for (var i = 0; i <= 100000; i++) {
+	items.push(<RecentGames index={i} key={"example-" + i} />);
+}
